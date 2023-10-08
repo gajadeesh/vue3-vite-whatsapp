@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+
+# NGINX SETUP
+  nginx:
+    image: nginx:stable-alpine
+    build:
+      dockerfile: Dockerfile
+    container_name: whatsapp_nginx
+    ports:
+        - "3000:3000"
+    restart: unless-stopped
+    tty: true
+    volumes:
+      # - .:/var/www/html
+      - ./docker/config/default.conf:/etc/nginx/conf.d/default.conf
+    environment: 
+        - CHOKIDAR_USEPOLLING=true
+    networks:
+        - app
+networks:
+  app:
+    driver: bridge

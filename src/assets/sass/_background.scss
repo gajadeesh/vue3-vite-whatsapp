@@ -1,0 +1,13 @@
+.background{
+    background-color: $backgroundColor; 
+    background-image: linear-gradient(to bottom, $primary 13%, rgba(0,0,0,0) 13%); 
+}
+
+.navbar{
+    background-color: $secondary;
+}
+
+.chat-background {
+    background: url('@/assets/images/background-chat.jpeg');
+    
+}
