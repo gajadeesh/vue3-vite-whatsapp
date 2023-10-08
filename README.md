@@ -4,6 +4,10 @@
 ```
 docker-compose up -d --build
 ```
+### test production base domain
+Go to [test locally](http://localhost:3000)
+
+
 ## Credentials
 ```
 username : admin
